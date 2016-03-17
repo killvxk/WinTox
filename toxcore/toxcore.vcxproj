@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{731E6A66-43DE-41D6-97B8-300F92B8B670}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>toxcore</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)!build\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)!obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)!build\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)!obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>SODIUM_STATIC;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)3rdparty\libsodium\include;$(SolutionDir)3rdparty\pthread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>Ws2_32.lib;libsodium.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)3rdparty\libsodium\x86\Debug\static;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="assoc.h" />
+    <ClInclude Include="crypto_core.h" />
+    <ClInclude Include="DHT.h" />
+    <ClInclude Include="friend_connection.h" />
+    <ClInclude Include="friend_requests.h" />
+    <ClInclude Include="group.h" />
+    <ClInclude Include="LAN_discovery.h" />
+    <ClInclude Include="list.h" />
+    <ClInclude Include="logger.h" />
+    <ClInclude Include="Messenger.h" />
+    <ClInclude Include="misc_tools.h" />
+    <ClInclude Include="network.h" />
+    <ClInclude Include="net_crypto.h" />
+    <ClInclude Include="onion.h" />
+    <ClInclude Include="onion_announce.h" />
+    <ClInclude Include="onion_client.h" />
+    <ClInclude Include="ping.h" />
+    <ClInclude Include="ping_array.h" />
+    <ClInclude Include="TCP_client.h" />
+    <ClInclude Include="TCP_connection.h" />
+    <ClInclude Include="TCP_server.h" />
+    <ClInclude Include="tox.h" />
+    <ClInclude Include="tox_old.h" />
+    <ClInclude Include="tox_old_code.h" />
+    <ClInclude Include="util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="assoc.c" />
+    <ClCompile Include="crypto_core.c" />
+    <ClCompile Include="DHT.c" />
+    <ClCompile Include="friend_connection.c" />
+    <ClCompile Include="friend_requests.c" />
+    <ClCompile Include="group.c" />
+    <ClCompile Include="LAN_discovery.c" />
+    <ClCompile Include="list.c" />
+    <ClCompile Include="logger.c" />
+    <ClCompile Include="Messenger.c" />
+    <ClCompile Include="network.c" />
+    <ClCompile Include="net_crypto.c" />
+    <ClCompile Include="onion.c" />
+    <ClCompile Include="onion_announce.c" />
+    <ClCompile Include="onion_client.c" />
+    <ClCompile Include="ping.c" />
+    <ClCompile Include="ping_array.c" />
+    <ClCompile Include="TCP_client.c" />
+    <ClCompile Include="TCP_connection.c" />
+    <ClCompile Include="TCP_server.c" />
+    <ClCompile Include="tox.c" />
+    <ClCompile Include="util.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

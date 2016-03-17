@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "toxcore", "toxcore\toxcore.vcxproj", "{731E6A66-43DE-41D6-97B8-300F92B8B670}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "toxdns", "toxdns\toxdns.vcxproj", "{D93D4EC7-64D0-4A8F-82FE-376AC51E3597}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "toxencryptsave", "toxencryptsave\toxencryptsave.vcxproj", "{18D1E01E-7A9F-4DA3-8CB5-AC5566EDFA06}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testing", "testing\testing.vcxproj", "{C2D36469-CC00-4425-A08E-4C1104A1AAAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{731E6A66-43DE-41D6-97B8-300F92B8B670}.Debug|Win32.ActiveCfg = Debug|Win32
+		{731E6A66-43DE-41D6-97B8-300F92B8B670}.Debug|Win32.Build.0 = Debug|Win32
+		{731E6A66-43DE-41D6-97B8-300F92B8B670}.Release|Win32.ActiveCfg = Release|Win32
+		{731E6A66-43DE-41D6-97B8-300F92B8B670}.Release|Win32.Build.0 = Release|Win32
+		{D93D4EC7-64D0-4A8F-82FE-376AC51E3597}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D93D4EC7-64D0-4A8F-82FE-376AC51E3597}.Debug|Win32.Build.0 = Debug|Win32
+		{D93D4EC7-64D0-4A8F-82FE-376AC51E3597}.Release|Win32.ActiveCfg = Release|Win32
+		{D93D4EC7-64D0-4A8F-82FE-376AC51E3597}.Release|Win32.Build.0 = Release|Win32
+		{18D1E01E-7A9F-4DA3-8CB5-AC5566EDFA06}.Debug|Win32.ActiveCfg = Debug|Win32
+		{18D1E01E-7A9F-4DA3-8CB5-AC5566EDFA06}.Debug|Win32.Build.0 = Debug|Win32
+		{18D1E01E-7A9F-4DA3-8CB5-AC5566EDFA06}.Release|Win32.ActiveCfg = Release|Win32
+		{18D1E01E-7A9F-4DA3-8CB5-AC5566EDFA06}.Release|Win32.Build.0 = Release|Win32
+		{C2D36469-CC00-4425-A08E-4C1104A1AAAB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C2D36469-CC00-4425-A08E-4C1104A1AAAB}.Debug|Win32.Build.0 = Debug|Win32
+		{C2D36469-CC00-4425-A08E-4C1104A1AAAB}.Release|Win32.ActiveCfg = Release|Win32
+		{C2D36469-CC00-4425-A08E-4C1104A1AAAB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
